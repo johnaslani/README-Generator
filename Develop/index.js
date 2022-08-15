@@ -80,13 +80,22 @@ inquirer
     {
       type: "input",
       name: "usage",
-      message:
-        "What is usage of your project?\nProvide instructions and examples for use. Include screenshots as needed.",
+      message: `What is usage of your project?\nProvide instructions and examples for use. Include screenshots as needed.
+      To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+
+    ```md
+    ![alt text](assets/images/screenshot.png)
+    ```
+      `,
     },
     {
       type: "input",
       name: "contributing",
-      message: "How did Contribut to your project?\nList your collaborators:",
+      message: `How did Contribut to your project?
+      List your collaborators.
+        If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+        If you followed tutorials, include links to those here as well.
+      `,
     },
     {
       type: "input",
@@ -95,9 +104,10 @@ inquirer
         "Please write a couple of tests for your application and provide examples on how to run them here.",
     },
     {
-      type: "input",
+      type: "list",
       name: "license",
-      message: "CHhooose a license for your application?",
+      message: "Chooose a license for your application?",
+      choices: ['MIT', 'Apache', 'BSD', 'Apache 2', ' GNU AGPLv3', ' GNU GPLv3', ' GNU LGPLv3', 'Mozilla', 'The Unlicense'],
     },
     {
       type: "input",
