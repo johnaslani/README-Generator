@@ -29,7 +29,7 @@ function renderLicenseSection(license) {
   if (license === "The Unlicense") {
     licenseContent = "";
   } else {
-    licenseContent = `This program licensed under ${license} `;
+    licenseContent = `This program licensed under ${license} :`;
   }
   return licenseContent;
 }
@@ -65,8 +65,10 @@ ${data.contributing}
 
 ${data.license}
 
-${renderLicenseLink(data.license)}
 ${renderLicenseSection(data.license)}
+
+${renderLicenseLink(data.license)}
+
 
 ## Questions
 
